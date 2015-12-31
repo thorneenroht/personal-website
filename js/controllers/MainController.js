@@ -1,3 +1,5 @@
 app.controller('MainController', ['$scope', function($scope) {
-  $scope.title = 'This is my personal website';
+  $scope.title = 'M T';
+  $scope.img = 'imgs/folioImage.jpg';
+  
 }]);
