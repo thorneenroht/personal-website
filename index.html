@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="PersonalWebsiteApp">
 	<head>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -10,6 +11,29 @@
 		<script type="text/javascript" src="./js/controllers/MainController.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="./css/personalSite.css">
+	
+
+
+    <script type="text/javascript">
+    google.load("feeds", "1");
+
+    function onething() {
+      var feed = new google.feeds.Feed("http://thorneonsoftware.com/rss");
+      feed.load(function(result) {
+        if (!result.error) {
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            $('#oneThing').append(entry.content);
+          }
+        }
+      });
+    }
+    
+    
+    google.setOnLoadCallback(onething);
+    
+    </script>
+
 	</head>
 	<body class="container" ng-controller="MainController" >
 
@@ -35,6 +59,8 @@
 				See what I am working on <a ng-href="{{github}}">{{github}}</a>
 				<br>
 				Check my professional history <a ng-href="{{linkedin}}">{{linkedin}}</a>
+				<br>
+				Where I ramble :) <a ng-href="{{ramble}}">{{ramble}}</a>
 			</div>			
 			<div class="col-lg-2 col-sm-6"></div>
 		</div>
@@ -52,6 +78,15 @@
 			</div>			
 			<div class="col-lg-2 col-sm-6"></div>
 		</div>
-		
+		<div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center; border-bottom: 1px solid black;">
+            <h3><a href="http://thorneonsoftware.com/">My blog - News Feed</a></h3>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="oneThing">
+
+        </div>
+      </div>
 	</body>
 </html>
