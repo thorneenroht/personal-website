@@ -13,21 +13,45 @@
 	</head>
 	<body class="container" ng-controller="MainController" >
 
-		<div class="row" style=" padding-top: 1cm;">
+		<div class="row" style=" padding-top: 1cm;font-family: 'Andale Mono';">
 			<div class="col-lg-4 col-sm-6"></div>
-			<div class="col-lg-4 col-sm-6" style="color:DeepSkyBlue;font-family: 'Times New Roman', Georgia, Serif;font-style: italic;font-size: x-large;text-align: center;" > 
+			<div class="col-lg-4 col-sm-6" style="color:Black;font-size: x-large;text-align: center;" > 
 				<h1>{{title}}</h1>
 			</div>			
 			<div class="col-lg-4 col-sm-6"></div>
 		</div>
 		<div class="row" style=" padding-top: 1cm;">
-			<div class="col-lg-4 col-sm-6"></div>
-			<div class="col-lg-4 col-sm-6" > 
-				<img ng-src="{{img}}" class="circular">
+			<div class="col-lg-2 col-sm-6"></div>
+			<div class="col-lg-6 col-sm-6" > 
+				<b>{{hello}}<br> {{msg}}</b>
 			</div>			
-			<div class="col-lg-4 col-sm-6"></div>
-
-
+			<div class="col-lg-2 col-sm-6"></div>
 		</div>
+		<div class="row" style=" padding-top: .50cm;">
+			<div class="col-lg-2 col-sm-6"></div>
+			<div class="col-lg-6 col-sm-6" > 
+				Reach out <a ng-href="{{email}}">{{email}}</a>
+				<br>
+				See what I am working on <a ng-href="{{github}}">{{github}}</a>
+				<br>
+				Check my professional history <a ng-href="{{linkedin}}">{{linkedin}}</a>
+			</div>			
+			<div class="col-lg-2 col-sm-6"></div>
+		</div>
+		<div class="row" style=" padding-top: .50cm;">
+			<div class="col-lg-2 col-sm-6"></div>
+			<div class="col-lg-6 col-sm-6" > 
+				{{description}}<br> <br> {{description2}}
+			</div>			
+			<div class="col-lg-2 col-sm-6"></div>
+		</div>
+		<div class="row" style=" padding-top: .50cm;">
+			<div class="col-lg-2 col-sm-6"></div>
+			<div class="col-lg-6 col-sm-6" > 
+				{{below}}
+			</div>			
+			<div class="col-lg-2 col-sm-6"></div>
+		</div>
+		
 	</body>
 </html>
